@@ -1,0 +1,43 @@
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+small {
+  font-size: 1.2rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+}
+
+.title {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  text-align: center;
+}
+
+.info-card > h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+.info-card > p {
+  margin: 0;
+  padding: 0;
+}
