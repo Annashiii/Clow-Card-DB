@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Card from './Components/Card.jsx';
+import { Grid, GridItem, Center, Box} from '@chakra-ui/react'
+
 
 
 function App() {
@@ -21,19 +23,23 @@ useEffect(async () => {
              id={movie.id}
              img={movie.image}
              title={movie.title}
-             originaltitle={movie.original_title}
+             originalTitle={movie.original_title}
              description={movie.description}
-             releasedate={movie.release_date}
+             releaseDate={movie.release_date}
              producer={movie.producer}
         />
      )     
   })
   return (
     <main>
-      <div className="container">
-        <h1 className="title"> Ghibli Database </h1>
-        {cardEl}
-      </div>
+      <h1 className="title"> Ghibli Database </h1>
+      <Box width="100%">
+      <Center>
+        <Grid templateColumns='repeat(6, 1fr)' gap={10}>
+               {cardEl}
+        </Grid>
+      </Center>
+      </Box>
     </main>
   );
 }
