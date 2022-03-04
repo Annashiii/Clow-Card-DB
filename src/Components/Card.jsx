@@ -1,13 +1,15 @@
 import React from 'react';
 
-export default function Card() {
+export default function Card(movies) {
+
   return (
-    <div className='info-card'>
-    <img       src='https://i.pinimg.com/originals/01/e4/ee/01e4ee43080af552fe6a6edfeaa5fb85.jpg' />
-      <h1> English Name </h1>
-      <p> Spanish Name</p>
-      <p>Kanji</p>
-      <p>Romaji</p>
-    </div>
+       <div className='info-card'>
+          <img src={movies.img} />
+          <h1>{movies.title}</h1>
+          <p>{movies.description}</p>
+         <p>{movies.orignaltitle}</p>          
+         <p>{movies.releasedate}</p>
+          <p>{movies.producer}</p>
+        </div>
   )
 }
