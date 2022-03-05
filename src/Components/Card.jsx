@@ -5,8 +5,10 @@ export default function Card(movies) {
 
   return (
        <div className='info-card'>
-         <Box borderWidth='1px' borderRadius='lg' overflow='hidden'>
+         <Box borderColor='white' bg='white' bgboxShadow='base' borderWidth='2px' borderRadius='lg' overflow='hidden' height={{base: 650 , sm: 670, xl: 700}}>
+           <Box>
           <img src={movies.img} />
+           </Box>
            <Box>
            <Box as='h4' fontWeight='semibold'>
             <Text fontSize='xl'>{movies.title}</Text>
@@ -14,9 +16,9 @@ export default function Card(movies) {
              <p>{movies.releaseDate}</p>
            </Box>
             <Box>            
-                <p>   
+                <Text>  
                    {movies.description}
-                </p>
+                </Text>
             </Box>  
            </Box>
          </Box>

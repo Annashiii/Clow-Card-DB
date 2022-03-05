@@ -7,20 +7,20 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  color: #333;
 }
 
-.title {
-  font-size: 2.4rem;
-  text-align: center;
+main {
+  background-color: #F3DBCF;
 }
 
+.head {
+  font-family: 'League Spartan', sans-serif;
+}
 
 .info-card {
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  height: 550px;
   text-align: center;
 }
 

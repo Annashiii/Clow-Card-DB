@@ -1,7 +1,7 @@
  import React, {useState, useEffect} from 'react';
 import './App.css';
 import Card from './Components/Card.jsx';
-import {Center, Box, SimpleGrid, Heading} from '@chakra-ui/react'
+import {Center, Box, SimpleGrid, Text} from '@chakra-ui/react'
 import {createBreakpoints} from '@chakra-ui/theme-tools';
 
 
@@ -34,14 +34,16 @@ useEffect(async () => {
 
   return (
     <main>
-      <Box display='flex' alignItems='center' justifyContent='center' mt='50px'>
-      <Heading size='xl' className='title'> Ghibli Database </Heading>
+      <Box bg='#B6B4C2' display='flex' alignItems='center' justifyContent='center' pt='50px' pb='30px'>
+      <Text fontSize={37} fontFamily='League Spartan' > Ghibli Database </Text>
       </Box>
-        <Box mt='80px' mb='20px' ml='40px' mr='40px'>
-          <SimpleGrid columns={[2, 3, 5]} spacingX='15px' spacingY='20px'>
+      <Center w='100%'>
+        <Box pt='80px' pb='20px' pl='40px' pr='40px'>
+          <SimpleGrid columns={{sm: 2, md: 3, lg: 4, xl: 5}} spacingX='15px' spacingY='40px'>
              {cardEl}
           </SimpleGrid>
         </Box>
+      </Center>
     </main>
   );
 }
