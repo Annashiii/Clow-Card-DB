@@ -12,14 +12,14 @@ export default function Card(movies) {
            <Box>
            <Box as='h4' fontWeight='semibold'>
             <Text fontSize='xl'>{movies.title}</Text>
-             <p>{movies.orignalTitle}</p>  
+             <Text fontFamily='Noto Sans JP' color='gray.500'>      
+                 {movies.originalTitle}
+             </Text>  
              <p>{movies.releaseDate}</p>
-           </Box>
-            <Box>            
-                <Text>  
-                   {movies.description}
-                </Text>
-            </Box>  
+           </Box>      
+              <Text fontSize='md'fontSize='15px'  maxH={250} p={5} overflow='scroll' >  
+                  {movies.description}
+              </Text>
            </Box>
          </Box>
         </div>
