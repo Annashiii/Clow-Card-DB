@@ -14,7 +14,7 @@ export default function Card(movies) {
              <p>{movies.releaseDate}</p>
            </Box>
             <Box>            
-                <p className='truncate'>    
+                <p>   
                    {movies.description}
                 </p>
             </Box>  

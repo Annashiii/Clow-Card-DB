@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
+ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Card from './Components/Card.jsx';
-import { Grid, GridItem, Center, Box} from '@chakra-ui/react'
+import {Center, Box, SimpleGrid, Heading} from '@chakra-ui/react'
+import {createBreakpoints} from '@chakra-ui/theme-tools';
 
 
 
@@ -30,16 +31,17 @@ useEffect(async () => {
         />
      )     
   })
+
   return (
     <main>
-      <h1 className="title"> Ghibli Database </h1>
-      <Box width="100%">
-      <Center>
-        <Grid templateColumns='repeat(6, 1fr)' gap={10}>
-               {cardEl}
-        </Grid>
-      </Center>
+      <Box display='flex' alignItems='center' justifyContent='center' mt='50px'>
+      <Heading size='xl' className='title'> Ghibli Database </Heading>
       </Box>
+        <Box mt='80px' mb='20px' ml='40px' mr='40px'>
+          <SimpleGrid columns={[2, 3, 5]} spacingX='15px' spacingY='20px'>
+             {cardEl}
+          </SimpleGrid>
+        </Box>
     </main>
   );
 }
