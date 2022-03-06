@@ -24,3 +24,7 @@ main {
   text-align: center;
 }
 
+.desc {
+  -webkit-overflow-scrolling: touch;
+}
+

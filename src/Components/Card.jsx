@@ -17,7 +17,7 @@ export default function Card(movies) {
              </Text>  
              <p>{movies.releaseDate}</p>
            </Box>      
-              <Text fontSize='md'fontSize='15px'  maxH={250} p={5} overflow='scroll' >  
+              <Text className='desc' fontSize='md'fontSize='15px'  maxH={250} p={5} overflow='auto' >  
                   {movies.description}
               </Text>
            </Box>
