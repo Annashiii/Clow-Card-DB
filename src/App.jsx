@@ -13,9 +13,22 @@ function App() {
   const [error, setError] = useState(null);
 
 useEffect(async () => {
-  const response = await fetch('https://ghibliapi.herokuapp.com/films');
-  const data = await response.json();
-  setMovies(data);
+  try {
+     const response = await fetch('https://ghibliapi.herokuapp.com/films');
+  if (!response.ok) {
+    throw new Error(
+      `This is an HTTP error: The status is ${response.status}`
+    );
+  }
+    const data = await response.json();
+    setMovies(data);
+    setError(null);
+  } catch(err) {
+    setError(err.message);
+    setMovies(null);
+  } finally {
+    setLoading(false);
+  }
 }, []);
 
   const cardEl = movies.map(movie => {
