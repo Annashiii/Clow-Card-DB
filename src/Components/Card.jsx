@@ -5,7 +5,7 @@ export default function Card(movies) {
 
   return (
        <div className='info-card'>
-         <Box borderColor='white' bg='white' bgboxShadow='base' borderWidth='2px' borderRadius='lg' overflow='hidden' height={{base: 650 , sm: 670, xl: 700}}>
+         <Box borderColor='#FCF1F2' bg='white' bgboxShadow='base' borderWidth='2px' borderRadius='lg' overflow='hidden' height={{base: 650 , sm: 670, xl: 700}}>
            <Box>
           <img src={movies.img} />
            </Box>

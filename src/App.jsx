@@ -34,8 +34,11 @@ useEffect(async () => {
 
   return (
     <main>
-      <Box bg='#B6B4C2' display='flex' alignItems='center' justifyContent='center' pt='50px' pb='30px'>
-      <Text fontSize={37} fontFamily='League Spartan' > Ghibli Database </Text>
+      <Box bg='#a5a58d' display='flex' alignItems='center' justifyContent='center' pt='40px' pb='30px'>
+        <Box>
+      <Text fontSize={47} fontFamily='Hubballi' letterSpacing='7px' > GHIBLI BASE </Text>
+        <Text textAlign='center'> スタジオジブリ </Text>
+        </Box>
       </Box>
       <Center w='100%'>
         <Box pt='80px' pb='20px' pl='40px' pr='40px'>
@@ -44,6 +47,11 @@ useEffect(async () => {
           </SimpleGrid>
         </Box>
       </Center>
+      <Box bg='#ddbea9' w='100%' pb='40px'>
+        <Center pt='25px' color='white'>
+          <Text fontFamily='League Spartan'> Made by HuniDev </Text>
+        </Center>
+        </Box>
     </main>
   );
 }
